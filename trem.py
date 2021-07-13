@@ -1,5 +1,5 @@
-EstacaoInicio = 6 #int(input("digite o numero da estação inicial: "))
-EstacaoFinal = 7 #(input("digite o numero da estação final: "))
+EstacaoInicio = int(input("digite o numero da estação inicial: "))
+EstacaoFinal = int(input("digite o numero da estação final: "))
 
 ######################### MATRIZES COM AS INFORMAÇÕES DO METRO ################################################
 DistanciaReta = [
@@ -83,7 +83,7 @@ def Tempo(inicio, fim, linha=None):
     TempoFinal = DistanciaReal[inicio-1][fim-1][0] *40/60
     print('ESSE É O TEMPO FINAL: {}'.format(TempoFinal))
     print('Estacao final {}'.format(EstacaoFinal))
-    Distancia = (DistanciaReta[EstacaoFinal-1][fim-1]) *40/60
+    Distancia = (DistanciaReta[EstacaoFinal-1][fim-1]) * 40/60
     print('distancia {}'.format(Distancia))
     Distancia += TempoFinal
     print('essa eh a distancia + tempo real {}'.format(Distancia))
@@ -115,12 +115,13 @@ def a_star(estacao, estacao_final, LinhaAtual):
         menortempo= 1000000000000000000000000000
         caminho = ''
         for ligacao in DistanciaAdj[estacao]:
-            DistanciaEntreEstacoes ,TempoEntreEstacoes, LinhaFinal = Tempo(estacao, ligacao[0], LinhaAtual)
-            if DistanciaEntreEstacoes < menorDistancia:
-                menorDistancia = DistanciaEntreEstacoes
-                menortempo=TempoEntreEstacoes
-                LinhaTemporaria = LinhaFinal
-                caminho= ligacao[0]
+            if ligacao[0] not in CaminhoFinal:
+                DistanciaEntreEstacoes ,TempoEntreEstacoes, LinhaFinal = Tempo(estacao, ligacao[0], LinhaAtual)
+                if DistanciaEntreEstacoes < menorDistancia:
+                    menorDistancia = DistanciaEntreEstacoes
+                    menortempo=TempoEntreEstacoes
+                    LinhaTemporaria = LinhaFinal
+                    caminho= ligacao[0]
 
         CaminhoFinal.append(caminho)
         LinhaOriginal = LinhaTemporaria
@@ -136,6 +137,6 @@ def a_star(estacao, estacao_final, LinhaAtual):
 #Tempo(3,2)
 #print()
 #Tempo(3,4)
-
-a_star(6,7,LinhaOriginal)
+CaminhoFinal.append(EstacaoInicio)
+a_star(EstacaoInicio,EstacaoFinal,LinhaOriginal)
 print(CaminhoFinal)
