@@ -1,5 +1,6 @@
 # Esse projeto foi pelo pelo grupo formado por Caio Cavalcanti Miranda e João Marcelo Alves. 
-# Ambos os integrantes trabalharam juntos no desenvolvimento criativo do código e em pesquisas para melhor entender o funcionamento do algortimo a*. A versão inicial do código foi escrita por João Marcelo e a versão final polida por Caio Miranda.
+# Ambos os integrantes trabalharam juntos no desenvolvimento criativo do código e em pesquisas para melhor entender o funcionamento do algortimo a*. 
+# A versão inicial do código foi escrita por João Marcelo e a versão final polida por Caio Miranda.
 
 
 Origem = [input('Origem (E1, ..., E14) ')]
