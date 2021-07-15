@@ -3,9 +3,9 @@
 # A versão inicial do código foi escrita por João Marcelo e a versão final polida por Caio Miranda.
 
 
-Origem = [input('Origem (E1, ..., E14) ')]
-Destino = input('Destino (E1, ..., E14) ')
-Horario = [int(i) for i in input('Horário (HH:MM) ').split(':')]
+Origem = [input('Origem (E1, ..., E14): ')]
+Destino = input('Destino (E1, ..., E14): ')
+Horario = [int(i) for i in input('Horário (HH:MM): ').split(':')]
 Horario = (Horario[0]-4)*60+Horario[1]
 
 DistanciaReta = [
