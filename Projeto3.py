@@ -1,3 +1,7 @@
+# Esse projeto foi pelo pelo grupo formado por Caio Cavalcanti Miranda e João Marcelo Alves. 
+# Ambos os integrantes trabalharam juntos no desenvolvimento criativo do código e em pesquisas para melhor entender o funcionamento do algortimo a*. A versão inicial do código foi escrita por João Marcelo e a versão final polida por Caio Miranda.
+
+
 Origem = [input('Origem (E1, ..., E14) ')]
 Destino = input('Destino (E1, ..., E14) ')
 Horario = [int(i) for i in input('Horário (HH:MM) ').split(':')]
